@@ -1,1 +1,1 @@
-# Java_Tools
+# This repo is for interesting, useful, or experimental Java tools for learnings purposes.
