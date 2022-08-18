@@ -23,7 +23,7 @@ class mouse extends JFrame {
 	mouse()
 	{
 		super("Mouse Finder of Death");
-		Image icon = Toolkit.getDefaultToolkit().getImage("../Project_A/happy.png");
+		Image icon = Toolkit.getDefaultToolkit().getImage("happy.png");
 		//frame.setIconImage(icon);
 		super.setIconImage(icon);
 
