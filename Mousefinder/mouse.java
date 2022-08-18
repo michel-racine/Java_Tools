@@ -8,13 +8,11 @@ class mouse extends JFrame {
 
 	boolean b;
 
-	// label
 	JLabel l, l1;
 
 	// Main Method
 	public static void main(String args[])
 	{
-
 		// create object
 		mouse m = new mouse();
 	}
@@ -56,6 +54,7 @@ class mouse extends JFrame {
 			Point p = pi.getLocation();
 
 			// set the text of labels
+			// offsets need tinkering:
 			l.setText("x position =" + (p.getX()+1920));
 			l1.setText("y position =" + p.getY()+95);
 		}
