@@ -1,13 +1,11 @@
-// Java Program to show the
-// position of mouse
+// Shows mouse position
+
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
 
 class mouse extends JFrame {
-
 	boolean b;
-
 	JLabel l, l1;
 
 	// Main Method
