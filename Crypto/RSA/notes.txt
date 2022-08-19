@@ -1,0 +1,34 @@
+// BASIC RSA EXAMPLE 
+
+import java.math.BigInteger;
+BigInteger n, p, q, e, t, d, m, c, decrypted;
+
+m = new BigInteger("5");
+e = new BigInteger("7");
+
+p = new BigInteger("3");
+q = new BigInteger("11");
+n = p.multiply(q);
+t = (p.subtract(new BigInteger("1"))).multiply(q.subtract(new BigInteger("1")));
+d = e.modInverse(t);
+
+c = m.modPow(e,n);
+
+decrypted = c.modPow(d,n);
+__________________________________________________________________________________
+import java.math.BigInteger;
+BigInteger n, p, q, e, t, d, m, c, decrypted;
+
+m = new BigInteger("3433114");
+e = new BigInteger("65537");
+
+p = BigInteger.probablePrime(1024, new Random()); 
+q = BigInteger.probablePrime(1024, new Random()); 
+n = p.multiply(q);
+t = (p.subtract(new BigInteger("1"))).multiply(q.subtract(new BigInteger("1")));
+
+d = e.modInverse(t);
+
+c = m.modPow(e,n);
+
+decrypted = c.modPow(d,n);
