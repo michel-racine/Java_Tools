@@ -1,5 +1,3 @@
-// modified from https://stackoverflow.com/questions/8632104/sine-wave-sound-generator-in-java
-
 import java.awt.*;
 import java.awt.event.*;
 import javax.swing.*;
