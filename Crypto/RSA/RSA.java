@@ -3,9 +3,7 @@ import java.security.*;
 import javax.crypto.*;
 
 /*    modified example from "java volume 2 advanced features" p. 610
- *    Usage is so easy and awesome.
- *
- *    java RSA.java -genkey publicKey privateKey					// Generate a key.
+ *    java RSA.java -genkey publicKey privateKey			// Generate a key.
  *    java RSA.java -encrypt plainFile encryptedFile publicKey		// Encrypt a file.
  *    java RSA.java -decrypt encryptedFile decryptedFile privateKey	// Decrypt a file. */
 
