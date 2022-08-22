@@ -28,6 +28,8 @@ public class UrlGetContentExample1{
 		String mimeType = connection.getContentType( );
 		System.out.println(" The mime type is : " + mimeType);
 
+		// Some major improvement needed to rest of code, doesn't print the page the way we want.
+		
 		Scanner sc = new Scanner(url.openStream());
 		StringBuffer sb = new StringBuffer();
 		while (sc.hasNext()) {
