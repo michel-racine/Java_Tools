@@ -38,8 +38,8 @@ public class UrlGetContentExample1{
 		String result = sb.toString();
 		// Removing the HTML tags
 		result = result.replaceAll("<[^>]*>", "");
-		// Removing the CSS stuff
-		result = result.replaceAll("\\{.*\\}", "");
+		// Removing the CSS stuff, need to fix this:
+		// result = result.replaceAll("\\{.*\\}", "");
 		System.out.println("Contents of the web page: " + result);
 
 	}
