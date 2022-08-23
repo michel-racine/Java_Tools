@@ -52,7 +52,6 @@ class mouse extends JFrame {
 			Point p = pi.getLocation();
 
 			// set the text of labels
-			// offsets need tinkering:
 			l.setText("x position =" + (p.getX()));
 			l1.setText("y position =" + p.getY());
 		}
