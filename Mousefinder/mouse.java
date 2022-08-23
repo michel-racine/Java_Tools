@@ -53,8 +53,8 @@ class mouse extends JFrame {
 
 			// set the text of labels
 			// offsets need tinkering:
-			l.setText("x position =" + (p.getX()+1920));
-			l1.setText("y position =" + p.getY()+95);
+			l.setText("x position =" + (p.getX()));
+			l1.setText("y position =" + p.getY());
 		}
 	}
 }
