@@ -36,7 +36,7 @@ public class MemoryImageGenerator extends Frame {
 
         while((radius < 2.0) & iti < max_iter){
           xn1 = Math.pow(xn,2) - Math.pow(yn,2) + xc;
-          yn1 = 2*xn*yn + yc;
+          yn1 = 2 * xn * yn + yc;
           radius = Math.sqrt(Math.pow(xn1,2) + Math.pow(yn1,2));
           xn = xn1;
           yn = yn1;
@@ -66,8 +66,8 @@ public class MemoryImageGenerator extends Frame {
     MemoryImageGenerator appwin = new MemoryImageGenerator();
     appwin.setSize(new Dimension(800, 800));
     appwin.setTitle("Happy Lucky Mandelbrot Set");
-    Image icon = Toolkit.getDefaultToolkit().getImage("Project_A/happy.png");
-    appwin.setIconImage(icon);
+    // Image icon = Toolkit.getDefaultToolkit().getImage("Project_A/happy.png");
+    // appwin.setIconImage(icon);
     appwin.setVisible(true);
   }
 }
