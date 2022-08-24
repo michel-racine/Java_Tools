@@ -8,7 +8,7 @@ import javax.imageio.ImageIO;
 public class MemoryImageGenerator extends Frame {
   Image img;
 
-  //Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
+  Dimension size = Toolkit.getDefaultToolkit().getScreenSize();
   int w = 800; // (int)size.getWidth();
   int h = 800; // (int)size.getHeight();
 
@@ -27,23 +27,23 @@ public class MemoryImageGenerator extends Frame {
 
     for(double y=0; y<800; y++) {
       for(double x=0; x<800; x++) {
-        xc = (x/200)-2.0-0.02;
-        yc = (y/200)-2.0-0.02;
+        xc = (x/200)-2.0-0.01;
+        yc = (y/200)-2.0-0.01;
         xn = xc; xn1 = xc;
         yn = yc; yn1 = yc;
         iti = 0;
         radius = Math.sqrt(Math.pow(xn1,2) + Math.pow(yn1,2));
 
         while((radius < 2.0) & iti < max_iter){
-          xn1 = Math.pow(xn,2) - Math.pow(yn,2) + xc;
+          xn1 = Math.pow(xn, 2) - Math.pow(yn, 2) + xc;
           yn1 = 2 * xn * yn + yc;
-          radius = Math.sqrt(Math.pow(xn1,2) + Math.pow(yn1,2));
+          radius = Math.sqrt(Math.pow(xn1, 2) + Math.pow(yn1, 2));
           xn = xn1;
           yn = yn1;
           iti += 1;
         }
-          pixels[i++] = (255 << 24) | (iti<<16) | (iti<<8) | iti;
-   //       pixels[i++] = (iti<<24) | (255<<16) | (255<<8) | 255;
+          pixels[i++] = (255 << 24) | (iti << 16) | (iti << 8) | iti;
+   //       pixels[i++] = (iti << 24) | (255 << 16) | (255 << 8) | 255;
       }
     }
     img = createImage(new MemoryImageSource(w, h, pixels, 0, w));
@@ -65,9 +65,9 @@ public class MemoryImageGenerator extends Frame {
   public static void main(String[] args) {
     MemoryImageGenerator appwin = new MemoryImageGenerator();
     appwin.setSize(new Dimension(800, 800));
-    appwin.setTitle("Happy Lucky Mandelbrot Set");
-    // Image icon = Toolkit.getDefaultToolkit().getImage("Project_A/happy.png");
-    // appwin.setIconImage(icon);
+    appwin.setTitle("Mandelbrot Set");
+    Image icon = Toolkit.getDefaultToolkit().getImage("Data/death.png");
+    appwin.setIconImage(icon);
     appwin.setVisible(true);
   }
 }
